@@ -1,3 +1,15 @@
+import Header from "../components/Header/Header";
+ 
+
+
+
+
+
+
+
+ 
+./components/GlobalStyles
+ 
 // enable legacy decorators babel plugin
   addDecoratorsLegacy(),
 
