@@ -1,9 +1,9 @@
-import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import { Fragment } from "react";
-import { publicRoutes, privateRoutes } from "~/routes";
-import { DefaultLayout } from "./components/Layout";
+import { Fragment } from 'react';
+import { publicRoutes, privateRoutes } from '~/routes';
+import { DefaultLayout } from './components/Layout';
 
 function App() {
   return (
