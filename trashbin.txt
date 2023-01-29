@@ -1,3 +1,10 @@
+.test {
+  color: pink;
+}
+
+ 
+className={styles.test}
+ 
 Router and Layout and Pages
 
  
