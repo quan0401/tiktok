@@ -8,8 +8,8 @@ import 'tippy.js/dist/tippy.css'; // optional
 import classNames from 'classnames/bind';
 import styles from './Header.module.scss';
 import images from '~/assets/images';
-import { Wrapper as PropperWrapper } from '../Propper';
-import AccountItem from '../AccountItem';
+import { Wrapper as PropperWrapper } from '~/components/Propper';
+import AccountItem from '~/components/AccountItem';
 
 const cx = classNames.bind(styles);
 
