@@ -2,15 +2,23 @@ import { useState } from 'react';
 // Font awesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
+  faChevronCircleUp,
+  faChevronUp,
   faCircleHalfStroke,
   faCircleXmark,
+  faCloudArrowUp,
   faEarthAmericas,
   faEllipsisVertical,
+  faEnvelope,
+  faEnvelopeOpenText,
   faKeyboard,
   faMagnifyingGlass,
+  faMessage,
+  faPaperPlane,
   faPlus,
   faQuestionCircle,
   faSpinner,
+  faUpload,
 } from '@fortawesome/free-solid-svg-icons';
 import Tippy from '@tippyjs/react/headless';
 import 'tippy.js/dist/tippy.css'; // optional
@@ -29,6 +37,34 @@ const MENU_ITEMS = [
   {
     icon: <FontAwesomeIcon icon={faEarthAmericas} />,
     title: 'English',
+    children: {
+      title: 'Language',
+      data: [
+        {
+          type: 'language',
+          title: 'English',
+          code: 'en',
+          children: {
+            title: 'English types',
+            data: [
+              {
+                title: 'English 1',
+                code: 'en1',
+              },
+              {
+                title: 'English 2',
+                code: 'en2',
+              },
+            ],
+          },
+        },
+        {
+          type: 'language',
+          title: 'Tiếng Việt',
+          code: 'viet',
+        },
+      ],
+    },
   },
   {
     icon: <FontAwesomeIcon icon={faQuestionCircle} />,
@@ -47,6 +83,12 @@ const MENU_ITEMS = [
 
 function Header() {
   const [searchResult, setSearchResult] = useState([]);
+  // Handle logic
+  const handleMenuChange = (menuItem) => {
+    console.log(menuItem);
+  };
+
+  const currentUser = true;
   return (
     <div className={cx('wrapper')}>
       <div className={cx('inner')}>
@@ -82,18 +124,36 @@ function Header() {
             </button>
           </div>
         </Tippy>
+
         <div className={cx('action')}>
-          <Button text leftIcon={<FontAwesomeIcon icon={faPlus} />}>
-            Upload
-          </Button>
+          {currentUser ? (
+            <>
+              <Button text leftIcon={<FontAwesomeIcon icon={faChevronUp} />}>
+                Upload
+              </Button>
+              <Button icon middleIcon={<FontAwesomeIcon icon={faPaperPlane} />}></Button>
+              <Button icon middleIcon={<FontAwesomeIcon icon={faEnvelopeOpenText} />}></Button>
+              <img
+                className={cx('current-user-avatar')}
+                src="https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                alt="Avatar"
+              />
+            </>
+          ) : (
+            <>
+              <Button text leftIcon={<FontAwesomeIcon icon={faPlus} />}>
+                Upload
+              </Button>
 
-          <Button primary>Log in</Button>
+              <Button primary>Log in</Button>
 
-          <Menu items={MENU_ITEMS}>
-            <button className={cx('more-btn')}>
-              <FontAwesomeIcon icon={faEllipsisVertical} />
-            </button>
-          </Menu>
+              <Menu items={MENU_ITEMS} onChange={handleMenuChange}>
+                <button className={cx('more-btn')}>
+                  <FontAwesomeIcon icon={faEllipsisVertical} />
+                </button>
+              </Menu>
+            </>
+          )}
         </div>
       </div>
     </div>

@@ -15,6 +15,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 var(--default-layout-horizontal-spacer);
 }
 .search-title {
   font-size: 1.4rem;
@@ -87,11 +88,11 @@ input:not(:placeholder-shown) ~ .search-btn {
     background-color: rgba(22, 24, 35, 0.06);
   }
 }
+// Actions
 .action {
   display: flex;
   align-items: center;
 }
-
 .more-btn {
   font-size: 2rem;
   background-color: transparent;
@@ -101,4 +102,12 @@ input:not(:placeholder-shown) ~ .search-btn {
 }
 .menu-items {
   width: 224px;
+}
+.current-user-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left: 28px;
+  cursor: pointer;
 }

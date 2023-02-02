@@ -11,6 +11,7 @@
   border-radius: 0;
   display: block;
   text-align: left;
+  line-height: 1.8rem;
   padding: 12px;
   width: 100%;
   border: none;
@@ -22,4 +23,22 @@
 }
 .menu-propper {
   padding: 8px 0;
+}
+// Header Component
+.header {
+  position: relative;
+  height: 50px;
+  margin-top: -8px;
+}
+.back-btn {
+  width: 50px;
+  height: 100%;
+  cursor: pointer;
+}
+.header-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
 }
