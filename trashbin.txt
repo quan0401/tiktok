@@ -1,3 +1,53 @@
+ leftIcon={<FontAwesomeIcon icon={faPlus} />}
+ 
+rightIcon={<FontAwesomeIcon icon={faPlus} />}
+ 
+className={cx('hasIcon')}
+ 
+ className={cx('icon')} 
+ 
+test(
+  test1,
+)
+ 
+icon
+ 
+className="icon"
+ 
+rounded
+ 
+linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), 
+ 
+background:
+ 
+key
+ 
+// Disabled
+ 
+transpar
+ 
+ent
+ 
+text
+ 
+e3e3e4
+ 
+currentColor
+ 
+border: 1px solid currentColor;
+ 
+large
+ 
+small
+ 
+small
+ 
+linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)),
+ 
+ href="https://www.youtube.com/" target="_blank"
+ 
+onClick={() => alert('123')}
+ 
 1, 2, 34
  
 ccc
