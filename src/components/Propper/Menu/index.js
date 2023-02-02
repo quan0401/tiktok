@@ -32,6 +32,7 @@ function Menu({ children, items, onChange = defaultFn }) {
   };
   return (
     <Tippy
+      offset={[10, 10]}
       interactive
       placement="bottom-end"
       delay={[0, 500]}
@@ -46,7 +47,7 @@ function Menu({ children, items, onChange = defaultFn }) {
                 }}
               />
             )}
-            {renderItems()}{' '}
+            {renderItems()}
           </PropperWrapper>
         </div>
       )}

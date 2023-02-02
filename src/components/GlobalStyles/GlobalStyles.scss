@@ -33,3 +33,13 @@ a[href] {
   text-decoration: none;
   line-height: normal;
 }
+// Custom Tippy Tooltips
+body .tippy-box {
+  background-color: #545454eb;
+  &[data-placement^='bottom'] > .tippy-arrow:before {
+    border-bottom-color: rgba(84, 84, 84, 0.92);
+  }
+}
+body .tippy-content {
+  padding: 10px 9px;
+}

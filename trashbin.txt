@@ -1,3 +1,5 @@
+currentUser ? userMenu : 
+ 
 menuItem
  
 to={'123'}

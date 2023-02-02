@@ -15,10 +15,14 @@
   padding: 12px;
   width: 100%;
   border: none;
+  font-weight: 500;
   &:hover {
     background-color: rgba(22, 24, 35, 0.03);
     border-color: #e3e3e4;
     box-shadow: none;
+  }
+  &.separate {
+    border-top: 1px solid rgba(22, 24, 35, 0.12);
   }
 }
 .menu-propper {
