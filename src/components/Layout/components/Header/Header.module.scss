@@ -88,4 +88,17 @@ input:not(:placeholder-shown) ~ .search-btn {
   }
 }
 .action {
+  display: flex;
+  align-items: center;
+}
+
+.more-btn {
+  font-size: 2rem;
+  background-color: transparent;
+  margin-left: 24px;
+  cursor: pointer;
+  padding: 8px;
+}
+.menu-items {
+  width: 224px;
 }

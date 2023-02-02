@@ -10,9 +10,9 @@ function Button({
   outline = false,
   small = false,
   large = false,
-  text = false,
   disabled = false,
   rounded = false,
+  text = false,
   leftIcon,
   rightIcon,
   children,
@@ -46,9 +46,9 @@ function Button({
     outline,
     small,
     large,
-    text,
     disabled,
     rounded,
+    text,
   });
   return (
     <Comp className={classes} {...props}>

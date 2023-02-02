@@ -31,14 +31,6 @@
     background-color: rgba(22, 24, 35, 0.03);
   }
 }
-.text {
-  padding: 8px 20px;
-  &:hover {
-    background-color: rgba(22, 24, 35, 0.03);
-    border-color: #e3e3e4;
-    box-shadow: none;
-  }
-}
 
 // Button types
 .primary {
@@ -58,6 +50,9 @@
     border-color: currentColor;
   }
 }
+.text {
+  padding: 10px 16px;
+}
 
 // Button size
 .small {
@@ -70,9 +65,13 @@
   min-width: 300px;
 }
 // Icon
-.left-icon {
+.left-icon,
+.right-icon {
   margin-right: 8px;
+  width: 20px;
+  display: inline-block;
+}
+.left-icon {
 }
 .right-icon {
-  margin-left: 8px;
 }

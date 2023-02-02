@@ -1,0 +1,25 @@
+// Menu wrapper
+.menu-list {
+  width: 240px;
+  pointer-events: all;
+  .menu-item {
+    margin: 0;
+  }
+}
+// Menu items
+.menu-item {
+  border-radius: 0;
+  display: block;
+  text-align: left;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  &:hover {
+    background-color: rgba(22, 24, 35, 0.03);
+    border-color: #e3e3e4;
+    box-shadow: none;
+  }
+}
+.menu-propper {
+  padding: 8px 0;
+}

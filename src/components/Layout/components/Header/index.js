@@ -1,7 +1,17 @@
 import { useState } from 'react';
 // Font awesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleXmark, faMagnifyingGlass, faPlus, faSpinner } from '@fortawesome/free-solid-svg-icons';
+import {
+  faCircleHalfStroke,
+  faCircleXmark,
+  faEarthAmericas,
+  faEllipsisVertical,
+  faKeyboard,
+  faMagnifyingGlass,
+  faPlus,
+  faQuestionCircle,
+  faSpinner,
+} from '@fortawesome/free-solid-svg-icons';
 import Tippy from '@tippyjs/react/headless';
 import 'tippy.js/dist/tippy.css'; // optional
 
@@ -11,8 +21,29 @@ import images from '~/assets/images';
 import { Wrapper as PropperWrapper } from '~/components/Propper';
 import AccountItem from '~/components/AccountItem';
 import Button from '~/components/Button';
+import Menu from '~/components/Propper/Menu';
 
 const cx = classNames.bind(styles);
+
+const MENU_ITEMS = [
+  {
+    icon: <FontAwesomeIcon icon={faEarthAmericas} />,
+    title: 'English',
+  },
+  {
+    icon: <FontAwesomeIcon icon={faQuestionCircle} />,
+    title: 'Feedback end help',
+    to: '/feedback',
+  },
+  {
+    icon: <FontAwesomeIcon icon={faKeyboard} />,
+    title: 'Keyboards shortcuts',
+  },
+  {
+    icon: <FontAwesomeIcon icon={faCircleHalfStroke} />,
+    title: 'Dark mode',
+  },
+];
 
 function Header() {
   const [searchResult, setSearchResult] = useState([]);
@@ -55,7 +86,14 @@ function Header() {
           <Button text leftIcon={<FontAwesomeIcon icon={faPlus} />}>
             Upload
           </Button>
+
           <Button primary>Log in</Button>
+
+          <Menu items={MENU_ITEMS}>
+            <button className={cx('more-btn')}>
+              <FontAwesomeIcon icon={faEllipsisVertical} />
+            </button>
+          </Menu>
         </div>
       </div>
     </div>
