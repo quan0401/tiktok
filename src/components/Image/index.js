@@ -13,7 +13,7 @@ function Image({ src, className, alt, fallback: customFallback = images.noImage,
     <img
       className={classNames(styles.wrapper, className)}
       ref={ref}
-      src={fallback || 'src'}
+      src={src || fallback}
       alt={alt}
       {...props}
       onError={handleError}
