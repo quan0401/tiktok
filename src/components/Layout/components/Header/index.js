@@ -8,15 +8,14 @@ import {
   faCircleXmark,
   faEarthAmericas,
   faEllipsisVertical,
-  faEnvelopeOpenText,
   faGear,
   faKeyboard,
   faMagnifyingGlass,
   faMusic,
-  faPaperPlane,
   faPlus,
   faQuestionCircle,
   faSpinner,
+  faUserFriends,
   faVideoCamera,
 } from '@fortawesome/free-solid-svg-icons';
 import HeadlessTippy from '@tippyjs/react/headless';
@@ -30,7 +29,8 @@ import { Wrapper as PropperWrapper } from '~/components/Propper';
 import AccountItem from '~/components/AccountItem';
 import Button from '~/components/Button';
 import Menu from '~/components/Propper/Menu';
-import { faUser } from '@fortawesome/free-regular-svg-icons';
+import { InboxIcon, MessageIcon } from '~/icons';
+import Image from '~/components/Image';
 
 const cx = classNames.bind(styles);
 
@@ -92,7 +92,7 @@ function Header() {
   const currentUser = true;
   const userMenu = [
     {
-      icon: <FontAwesomeIcon icon={faUser} />,
+      icon: <FontAwesomeIcon icon={faUserFriends} />,
       title: 'View profile',
       to: '/profile',
     },
@@ -161,14 +161,14 @@ function Header() {
                 Upload
               </Button>
               <Tippy delay={[0, 100]} content="Messages" placement="bottom">
-                <div className={cx('btn-icon')}>
-                  <Button icon middleIcon={<FontAwesomeIcon icon={faPaperPlane} />}></Button>
-                </div>
+                <button className={cx('action-btn')}>
+                  <MessageIcon />
+                </button>
               </Tippy>
               <Tippy delay={[0, 100]} content="Inbox" placement="bottom">
-                <div className={cx('btn-icon')}>
-                  <Button icon middleIcon={<FontAwesomeIcon icon={faEnvelopeOpenText} />}></Button>
-                </div>
+                <button className={cx('action-btn')}>
+                  <InboxIcon />
+                </button>
               </Tippy>
             </>
           ) : (
@@ -182,10 +182,11 @@ function Header() {
           )}
           <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
             {currentUser ? (
-              <img
+              <Image
                 className={cx('current-user-avatar')}
                 src="https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
                 alt="Avatar"
+                fallback="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=0.752xw:1.00xh;0.175xw,0&resize=1200:*"
               />
             ) : (
               <button className={cx('more-btn')}>
