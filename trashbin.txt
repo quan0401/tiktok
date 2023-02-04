@@ -1,3 +1,11 @@
+.trim()
+ 
+index
+ 
+user.full_name
+ 
+1, 2, 3
+ 
 faMagnifyingGlass
  
 const first = useRef(second)
