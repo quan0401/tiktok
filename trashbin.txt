@@ -1,3 +1,11 @@
+hideOnClick={true} 
+ 
+false
+ 
+'/@/:nickname'
+ 
+'/following'
+ 
 .trim()
  
 index
